@@ -110,6 +110,28 @@
             }
         
         ?>
+        <br />
+        <?php // Stops looping and goes out of break
+            $count = 0;
+            while ($count <= 10){
+                if ($count === 5){
+                    break;
+                }
+                echo $count . ", ";
+                $count++;
+            }
+        ?>
+        <br />
+        <?php // loops inside a loop with break
+            for ($i =0; $i<= 5; $i++){
+                if ($i % 2 === 0) { continue(1); }
+                for ($k=0; $k<= 5; $k++){
+                    if ($k === 3) {break(2); } 
+                    // Just like continue, if you put a 2 at the end of the break, it will know where to break out of. Instead of breaking out from the second loop, it will break from the first and second loop
+                    echo $i . "-" . $k . "<br />";
+                }
+            }
+        ?>
 
 </body>
 </html>
