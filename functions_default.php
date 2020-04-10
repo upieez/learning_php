@@ -9,13 +9,15 @@
 
     <?php
         // The ones that are mandatory needs to be first while the optional ones are at the back
+        ini_set('display_errors', 'On');
+        error_reporting(E_ALL);
 
         function paint($color,$room='office'){
             return "The color of the {$room} is {$color}.<br />";
         }
 
-        // echo paint();
-        // echo paint('bedroom', null); // if the argument is null, it will not become the default. It will be set as nothing instead
+        echo paint();
+        echo paint('bedroom', null); // if the argument is null, it will not become the default. It will be set as nothing instead
         echo paint('bedroom');
         echo paint('red');
     ?>
